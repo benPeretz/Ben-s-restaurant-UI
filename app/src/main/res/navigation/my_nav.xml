@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/drinks_fragment">
+    <fragment
+        android:id="@+id/drinks_fragment"
+        android:name="com.example.bens_restaurant.drinks_fragment"
+        android:label="drinks_fragments"
+        tools:layout="@layout/drinks_fragments" >
+        <action
+            android:id="@+id/action_drinks_fragment_to_appetizers_fragments3"
+            app:destination="@id/appetizers_fragments3"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_right"
+            app:popExitAnim="@anim/to_right" />
+        <action
+            android:id="@+id/action_drinks_fragment_to_sumUp_fragment"
+            app:destination="@id/sumUp_fragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/appetizers_fragments3"
+        android:name="com.example.bens_restaurant.appetizers_fragments"
+        android:label="appetizers_fragment"
+        tools:layout="@layout/appetizers_fragment" >
+        <action
+            android:id="@+id/action_appetizers_fragments3_to_drinks_fragment"
+            app:destination="@id/drinks_fragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/from_right"
+            app:popUpTo="@id/drinks_fragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_appetizers_fragments3_to_sumUp_fragment"
+            app:destination="@id/sumUp_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/sumUp_fragment"
+        android:name="com.example.bens_restaurant.sumUp_fragment"
+        android:label="sumup_fragment"
+        tools:layout="@layout/sumup_fragment" />
+</navigation>

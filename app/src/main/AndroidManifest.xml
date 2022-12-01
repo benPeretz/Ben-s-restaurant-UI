@@ -13,6 +13,13 @@
         android:theme="@style/Theme.Bens_restaurant"
         tools:targetApi="31">
         <activity
+            android:name=".MenuActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".resevation_details_continue"
             android:exported="false">
             <meta-data
@@ -30,7 +37,6 @@
             android:name=".reservation"
             android:exported="false"
             android:launchMode="singleTask">
-
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />

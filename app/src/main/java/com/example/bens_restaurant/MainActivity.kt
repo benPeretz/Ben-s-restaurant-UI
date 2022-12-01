@@ -21,7 +21,10 @@ class MainActivity : AppCompatActivity() {
         startActivity(intent)
 
 
-
+        }
+        binding.buttonMenu.setOnClickListener{
+            val intent =Intent(this,MenuActivity::class.java)
+            startActivity(intent)
         }
 
 
